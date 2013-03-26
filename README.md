@@ -39,7 +39,6 @@ grunt.registerTask('default', ['bowerRequireWrapper']);
 The `destPath.js` file then contains:
 
 ```js
-/* File generated */
 define(["jQuery", "underscore"], function ($, _){
 
 /* Original code from originPath.js */

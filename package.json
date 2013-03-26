@@ -1,46 +1,36 @@
 {
-    "name": "grunt-bower-require-wrapper",
-    "description": "Wraps files with requireJS headers using the bower dependencies",
-    "version": "0.1.0",
-    "homepage": "https://github.com/ravenlp/grunt-bower-require-wrapper",
-    "author": {
-        "name": "Jorge Condomi",
-        "url": "http://jorgecondomi.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/ravenlp/grunt-bower-require-wrapper.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ravenlp/grunt-bower-require-wrapper/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/ravenlp/grunt-bower-require-wrapper/blob/master/LICENSE-MIT"
-        }
-    ],
-    "main": "Gruntfile.js",
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "dependencies": {
-        "bower": "~0.8.5"
-    },
-    "devDependencies": {
-        "grunt": "0.4.0rc6",
-        "grunt-contrib-nodeunit": "0.1.2rc6",
-        "grunt-contrib-jshint": "0.1.1rc6",
-        "grunt-contrib-clean": "0.4.0rc6"
-    },
-    "keywords": [
-        "grunttask",
-        "bower",
-        "requireJs",
-        "AMD"
-    ],
-    "readme": "# grunt-bower-require-wrapper\n\nWraps files with [requireJS headers](http://requirejs.org/docs/whyamd.html#definition) for modules definition using bower installed dependencies or user specified ones.\n\n## Getting Started\n\nThis is a grunt task. Please refer to the [Grunt documentation](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md) for more information on how to use this task.\n\nTo install this particular plugin use:\n\n```shell\nnpm install grunt-bower-require-wrapper --save-dev\n```\n\nOr register it as a dependency on your `package.json` and run `nom install`\n\n## Basic dependency requirement header wrapping\n\nThe following example read the content of `originPath.js` and wraps it in a [typical requireJs header](http://requirejs.org/docs/whyamd.html#definition) specifying each dependency.\n\n```js\ngrunt.initConfig({\n	bowerRequireWrapper: {\n		target: {\n          files : {\n              'destPath.js' : ['originPath.js']\n          }\n          modules: {\n              'jQuery' : '$',\n              'underscore' : '_'\n          },\n          exports: '$'\n      }	}\n});\n\ngrunt.registerTask('default', ['bowerRequireWrapper']);\n```\n\nThe `destPath.js` file then contains:\n\n```js\n/* File generated */\ndefine(['jQuery', 'underscore'], function ($, _){\n\n/* Original code from originPath.js */\n\nreturn $;\n});\n```js\n\n\n\n## Example usage with bower\n\n```js\ngrunt.initConfig({\n	bowerRequireWrapper: {\n		target: {\n          files : {\n              'destPath.js' : ['originPath.js']\n          }\n          modules: {\n              'jQuery' : '$',\n              'underscore' : '_',\n              'angular' : 'angular'\n          },\n          exports: 'angular'\n          bower: true,\n          banner: '// File generated //'\n      }	}\n});\n\ngrunt.registerTask('default', ['bowerRequireWrapper']);\n```\n\nThis example *loads all the bower installed dependencies names*, then merges it with the modules array to specify the variable name exported for each dependency.\n\nThe `destPath.js` file content:\n\n```js\n/* File generated */\ndefine(['jQuery', 'underscore', 'angular'], function ($, _, angular){\n\n/* Original code from originPath.js */\n\nreturn angular;\n});\n```js\n\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n"
+  "name": "grunt-bower-require-wrapper",
+  "version": "0.1.0",
+  "description": "Wraps files with requireJS define() statements for modules definition using bower installed dependencies or user specified ones",
+  "main": "Gruntfile.js",
+  "homepage": "https://github.com/ravenlp/grunt-bower-require-wrapper",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravenlp/grunt-bower-require-wrapper.git"
+  },
+  "bugs": {
+      "url": "https://github.com/ravenlp/grunt-bower-require-wrapper/issues"
+  },
+  "keywords": [
+    "grunt",
+    "bower",
+    "requireJs"
+  ],
+  "dependencies": {
+      "bower": "~0.8.5"
+  },
+  "devDependencies": {
+      "grunt": "0.4.0rc6",
+      "grunt-contrib-nodeunit": "0.1.2rc6",
+      "grunt-contrib-jshint": "0.1.1rc6",
+      "grunt-contrib-clean": "0.4.0rc6"
+  },
+  "author": "Jorge Condomi",
+  "license": "MIT"
 }
