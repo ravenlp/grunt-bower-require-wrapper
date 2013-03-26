@@ -1,6 +1,6 @@
 # grunt-bower-require-wrapper
 
-Wraps files with [requireJS headers](http://requirejs.org/docs/whyamd.html#definition) for modules definition using bower installed dependencies or user specified ones.
+Wraps files with [requireJS define()](http://requirejs.org/docs/whyamd.html#definition) statements for modules definition using bower installed dependencies or user specified ones.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ To install this particular plugin use:
 npm install grunt-bower-require-wrapper --save-dev
 ```
 
-Or register it as a dependency on your `package.json` and run `nom install`
+Or register it as a dependency on your `package.json` and run `npm install`
 
 ## Basic dependency requirement header wrapping
 
@@ -91,4 +91,4 @@ return angular;
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)
+[MIT license](http://opensource.org/licenses/bsd-license.php)
