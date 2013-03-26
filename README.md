@@ -46,7 +46,7 @@ define(["jQuery", "underscore"], function ($, _){
 
 return $;
 });
-```js
+```
 
 
 
@@ -66,7 +66,7 @@ grunt.initConfig({
           },
           exports: 'angular'
           bower: true,
-          banner: '// File generated //'
+          banner: '/* File generated */'
       }	}
 });
 
@@ -85,7 +85,7 @@ define(["jQuery", "underscore", "angular"], function ($, _, angular){
 
 return angular;
 });
-```js
+```
 
 
 
