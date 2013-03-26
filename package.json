@@ -2,17 +2,17 @@
     "name": "grunt-bower-require-wrapper",
     "description": "Wraps files with requireJS headers using the bower dependencies",
     "version": "0.1.0",
-    "homepage": "",
+    "homepage": "https://github.com/ravenlp/grunt-bower-require-wrapper",
     "author": {
         "name": "Jorge Condomi",
         "url": "http://jorgecondomi.com"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "git://github.com/ravenlp/grunt-bower-require-wrapper.git"
     },
     "bugs": {
-        "url": ""
+        "url": "http://github.com/ravenlp/grunt-bower-require-wrapper/issues"
     },
     "licenses": [
         {
